@@ -1,24 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RestaurantFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="x7F-En-2bl">
+                                <rect key="frame" x="0.0" y="59.000000000000028" width="393" height="454.66666666666674"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="izin" translatesAutoresizingMaskIntoConstraints="NO" id="5gT-m3-MbC">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="341.66666666666669"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="f7Y-kn-gj8">
+                                        <rect key="frame" x="0.0" y="357.66666666666669" width="393" height="97"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Konum Bilginize İhtiyaçımız var!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xg9-EK-rJ2">
+                                                <rect key="frame" x="13" y="0.0" width="367" height="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lütfen Gps Bilgilerinizi Paylaşın" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNH-em-fwf">
+                                                <rect key="frame" x="61.666666666666657" y="73" width="270" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="0.96525211919999998" green="0.96525211919999998" blue="0.96525211919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JvR-jQ-zHW">
+                                <rect key="frame" x="0.0" y="688.66666666666663" width="393" height="109.33333333333337"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0EA-UJ-x4v">
+                                        <rect key="frame" x="8" y="8" width="377" height="41.666666666666664"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41.670000000000002" id="MSg-aU-f4d"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                            </backgroundConfiguration>
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="İzin Ver!">
+                                                    <attributes>
+                                                        <font key="NSFont" size="24" name="Helvetica"/>
+                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ig6-2V-4Mg">
+                                        <rect key="frame" x="8" y="59.666666666666742" width="377" height="41.666666666666657"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41.670000000000002" id="9qS-Ju-UDt"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="1" green="0.12790124589999999" blue="0.03979532107" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Hayır ,Henüz değil.">
+                                                    <attributes>
+                                                        <font key="NSFont" size="24" name="Helvetica"/>
+                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" red="0.96525211919999998" green="0.96525211919999998" blue="0.96525211919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstItem="x7F-En-2bl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7xg-Lw-zBj"/>
+                            <constraint firstItem="x7F-En-2bl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="H0Z-cb-QA2"/>
+                            <constraint firstItem="5gT-m3-MbC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.400939" id="HS8-ef-LWh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JvR-jQ-zHW" secondAttribute="trailing" id="c4u-ZZ-9kx"/>
+                            <constraint firstItem="JvR-jQ-zHW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eUu-xS-n5e"/>
+                            <constraint firstAttribute="trailing" secondItem="x7F-En-2bl" secondAttribute="trailing" id="wdy-Yq-yd6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JvR-jQ-zHW" secondAttribute="bottom" constant="20" id="zR3-Iu-NbK"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-28.244274809160306" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="izin" width="512" height="512"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
