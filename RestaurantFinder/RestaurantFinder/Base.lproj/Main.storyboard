@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="x7F-En-2bl">
-                                <rect key="frame" x="0.0" y="59.000000000000028" width="393" height="454.66666666666674"/>
+                                <rect key="frame" x="0.0" y="59.000000000000028" width="393" height="431.66666666666674"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="izin" translatesAutoresizingMaskIntoConstraints="NO" id="5gT-m3-MbC">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="341.66666666666669"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="f7Y-kn-gj8">
-                                        <rect key="frame" x="0.0" y="357.66666666666669" width="393" height="97"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="f7Y-kn-gj8">
+                                        <rect key="frame" x="0.0" y="357.66666666666669" width="393" height="74"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Konum Bilginize İhtiyaçımız var!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xg9-EK-rJ2">
                                                 <rect key="frame" x="13" y="0.0" width="367" height="30"/>
@@ -31,12 +31,16 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lütfen Gps Bilgilerinizi Paylaşın" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNH-em-fwf">
-                                                <rect key="frame" x="61.666666666666657" y="73" width="270" height="24"/>
+                                                <rect key="frame" x="61.666666666666657" y="50" width="270" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" red="0.96525211919999998" green="0.96525211919999998" blue="0.96525211919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Xg9-EK-rJ2" firstAttribute="top" secondItem="f7Y-kn-gj8" secondAttribute="top" id="Xb2-WP-NXd"/>
+                                            <constraint firstItem="UNH-em-fwf" firstAttribute="top" secondItem="Xg9-EK-rJ2" secondAttribute="bottom" constant="20" id="hT0-pf-I51"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
