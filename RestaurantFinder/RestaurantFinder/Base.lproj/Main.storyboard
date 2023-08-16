@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Location View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RestaurantFinder" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="LocationViewController" customModule="RestaurantFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="LocationView" customModule="RestaurantFinder" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="341.66666666666669"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="f7Y-kn-gj8">
-                                        <rect key="frame" x="0.0" y="357.66666666666669" width="393" height="73.999999999999943"/>
+                                        <rect key="frame" x="0.0" y="357.66666666666669" width="393" height="74"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Konum Bilginize İhtiyaçımız var!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xg9-EK-rJ2">
                                                 <rect key="frame" x="13" y="0.0" width="367" height="30"/>
@@ -69,6 +69,9 @@
                                             </attributedString>
                                             <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnPermision:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="4kg-nK-Z6H"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ig6-2V-4Mg">
                                         <rect key="frame" x="8" y="59.666666666666742" width="377" height="41.666666666666657"/>
@@ -90,6 +93,9 @@
                                             </attributedString>
                                             <color key="baseForegroundColor" red="0.96525211919999998" green="0.96525211919999998" blue="0.96525211919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnNotAllow:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="Dqg-Ze-JoX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
@@ -106,6 +112,10 @@
                             <constraint firstAttribute="trailing" secondItem="x7F-En-2bl" secondAttribute="trailing" id="wdy-Yq-yd6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JvR-jQ-zHW" secondAttribute="bottom" constant="20" id="zR3-Iu-NbK"/>
                         </constraints>
+                        <connections>
+                            <outlet property="btnNotAllow" destination="ig6-2V-4Mg" id="be9-Mt-7VZ"/>
+                            <outlet property="btnPermision" destination="0EA-UJ-x4v" id="aKO-XB-KT8"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -115,13 +125,13 @@
         <!--Restoranlar-->
         <scene sceneID="c8d-Zs-RtL">
             <objects>
-                <tableViewController id="3KX-L0-IJY" sceneMemberID="viewController">
+                <tableViewController id="3KX-L0-IJY" customClass="RestaurantTableViewController" customModule="RestaurantFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="D8c-s5-SUK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="restoranCell" rowHeight="283" id="wXj-b3-chk">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="restoranCell" rowHeight="283" id="wXj-b3-chk" customClass="RestaurantTableViewCell" customModule="RestaurantFinder" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="283"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wXj-b3-chk" id="Zjw-up-Crj">
@@ -184,6 +194,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imgIcon" destination="MHI-aX-wNr" id="7vt-NU-RJ0"/>
+                                    <outlet property="imgRestaurant" destination="L5r-pR-mDT" id="4Za-u7-auA"/>
+                                    <outlet property="lblLocation" destination="CP5-RE-FX3" id="Sdw-TA-X4O"/>
+                                    <outlet property="lblRestaurantname" destination="w23-d2-eay" id="GA2-TL-q3L"/>
                                     <segue destination="oNO-Eb-pqy" kind="show" identifier="toDetail" id="hBA-A5-8Ow"/>
                                 </connections>
                             </tableViewCell>
@@ -202,8 +216,8 @@
         <!--Ayrıntılar-->
         <scene sceneID="ajh-Mc-SN3">
             <objects>
-                <viewController id="oNO-Eb-pqy" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PTN-mc-51J">
+                <viewController id="oNO-Eb-pqy" customClass="FoodDetailViewController" customModule="RestaurantFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PTN-mc-51J" customClass="FoodDetailView" customModule="RestaurantFinder" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="1025"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -341,6 +355,9 @@
                                         <rect key="frame" x="122.66666666666666" y="224" width="115.66666666666666" height="26"/>
                                         <color key="pageIndicatorTintColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="handleControl:" destination="PTN-mc-51J" eventType="valueChanged" id="pCO-gD-rLJ"/>
+                                        </connections>
                                     </pageControl>
                                 </subviews>
                                 <constraints>
@@ -357,6 +374,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XkH-4a-2So"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="collectionView" destination="pnp-vE-tbg" id="rIb-uD-hFE"/>
+                            <outlet property="lblKonum" destination="FpH-Vx-ewh" id="JM0-n7-6so"/>
+                            <outlet property="lblPuan" destination="rma-Pv-y9r" id="90a-ai-vWB"/>
+                            <outlet property="lblSaat" destination="Iza-Tm-I3B" id="NmB-5V-vQV"/>
+                            <outlet property="lblfiyat" destination="keb-Ra-87Y" id="vAe-ui-JaO"/>
+                            <outlet property="mapView" destination="UcC-XM-cpr" id="Jmk-8a-G8w"/>
+                            <outlet property="pageController" destination="UTx-DE-ior" id="O7F-Ze-eke"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Ayrıntılar" largeTitleDisplayMode="never" id="hGu-QP-CpU"/>
                     <size key="freeformSize" width="393" height="1025"/>
